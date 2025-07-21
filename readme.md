@@ -1,1 +1,3 @@
-Esse programa é uma lista de tarefa com varias funcioes e exportação para Json.
+# Task List
+
+A simple task link written in Python.
