@@ -20,7 +20,7 @@ def delete(x):
     for i,value in enumerate(x):
         print(f'\t [{i}]: {value}')
 
-    task_del = input('\nWhick task would you like to delete?: [number] '
+    task_del = input('\nWhich task would you like to delete?: [number] '
     'for a specific index [l] for last index on the list [r] to return a previous menu ').lower()
     
     if task_del == 'l':
