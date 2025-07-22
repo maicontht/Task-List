@@ -2,7 +2,7 @@ import defs
 import os 
 import json_export
 
-tasks = [1, 2]
+tasks = ['To Study Python', 'Sleep 8 hour per night']
 undo_tasks = []
 options = {
     '1': lambda: defs.list_tasks(tasks),
