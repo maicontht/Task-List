@@ -3,11 +3,12 @@ import os
 import json_export
 
 tasks = ['To Study Python', 'Sleep 8 hour per night']
-undo_tasks = []
+undo_tasks = ['Eat', 'Shower time', 'Read', 'Breakfast']
 options = {
     '1': lambda: defs.list_tasks(tasks),
-    '2': lambda: defs.delete(tasks),
-    'add': lambda: print('oi')
+    '2': lambda: defs.delete(tasks, undo_tasks),
+    '3': lambda: defs.redo(tasks, undo_tasks),
+    'add': lambda: print('hi')
 }
 
 while True:
