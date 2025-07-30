@@ -2,13 +2,14 @@ import defs
 import os 
 import json_defs
 
-tasks = ['To Study Python', 'Sleep 8 hour per night']
+tasks = []
 undo_tasks = []
 options = {
     '1': lambda: defs.list_tasks(tasks),
     '2': lambda: defs.delete(tasks, undo_tasks),
     '3': lambda: defs.redo(tasks, undo_tasks),
     '4': lambda: json_defs.import_list(tasks, undo_tasks),
+    '5': lambda: json_defs.export_list(tasks, undo_tasks),
     'add': lambda: print('hi')
 }
 
