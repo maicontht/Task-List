@@ -141,3 +141,19 @@ def redo(x, y):
         os.system('cls')
         print('you typed an invalid command, type another one\n')
         redo(x, y)
+
+def add(x, z):
+    if not z:
+        print('Type something to add!')
+        print()
+        return
+    
+    z = z.strip()
+    x.append(z)
+
+    print('Tasks: ')
+    for i, value in enumerate(x):
+            print(f'\t [{i}]: {value}')
+
+    print()
+        

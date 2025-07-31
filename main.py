@@ -2,16 +2,24 @@ import defs
 import os 
 import json_defs
 
-tasks = []
+
+path_json = 'tasks.json'
+tasks = json_defs.read_json([], path_json)
 undo_tasks = []
 options = {
     '1': lambda: defs.list_tasks(tasks),
     '2': lambda: defs.delete(tasks, undo_tasks),
     '3': lambda: defs.redo(tasks, undo_tasks),
-    '4': lambda: json_defs.import_list(tasks, undo_tasks),
-    '5': lambda: json_defs.export_list(tasks, undo_tasks),
-    'add': lambda: print('hi')
+    '4': lambda: tasks.extend(json_defs.import_list()),
+    '5': lambda: json_defs.export_list(tasks),
+    'add': lambda: defs.add(tasks, task)
 }
+
+print('Tasks: ')
+for i, value in enumerate(tasks):
+    print(f'\t [{i}]: {value}')
+
+print()
 
 while True:
     print('What would you like to do:\n[Enter task] = Add '
