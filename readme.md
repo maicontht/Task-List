@@ -1,3 +1,7 @@
 # Task List
 
-A simple task link written in Python.
+A simple to-do list developed in Python to help with organization.
+
+# Requirements
+
+• Base Python
